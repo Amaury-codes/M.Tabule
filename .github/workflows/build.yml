@@ -14,36 +14,23 @@ jobs:
     # Utilise la dernière version de Windows fournie par GitHub
     runs-on: windows-latest
     steps:
-      # 1. Récupère le code de votre projet
       - name: Checkout
         uses: actions/checkout@v4
-
-      # 2. Installe Go (version 1.21)
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
           go-version: '1.21'
-
-      # 3. Installe Node.js (version 18)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-
-      # 4. Installe les dépendances du frontend
       - name: Install Frontend Dependencies
-        # Va dans le dossier frontend et lance npm install
         run: cd frontend && npm install
-
-      # 5. Installe la CLI de Wails
       - name: Install Wails CLI
         run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
-
-      # 6. Compile l'application Wails pour Windows
       - name: Build Wails App
-        run: wails build -platform windows/amd64
-
-      # 7. Met l'exécutable compilé à disposition pour le téléchargement
+        # Ajout du flag -clean pour forcer la régénération de l'icône
+        run: wails build -platform windows/amd64 -clean
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -69,7 +56,8 @@ jobs:
       - name: Install Wails CLI
         run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
       - name: Build Wails App
-        run: wails build -platform darwin/universal
+        # Ajout du flag -clean pour forcer la régénération de l'icône
+        run: wails build -platform darwin/universal -clean
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
