@@ -12,5 +12,13 @@
   "author": {
     "name": "Amaury Poussier",
     "email": "amaury.poussier@gmail.com"
+  },
+  "platform": {
+    "windows": {
+      "icon": "icon.ico"
+    },
+    "darwin": {
+      "icon": "icon.icns"
+    }
   }
 }
