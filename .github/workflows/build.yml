@@ -31,7 +31,7 @@ jobs:
           name: M.Tabule-windows
           path: build/bin/*.exe
 
-  # Tâche pour compiler sur macOS (en bonus)
+  # Tâche pour compiler sur macOS
   build-macos:
     # Utilise la dernière version de macOS fournie par GitHub
     runs-on: macos-latest
