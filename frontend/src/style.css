@@ -1,0 +1,107 @@
+/* --- DEBUT DU FICHIER style.css --- */
+
+/* Import de Bootstrap (sera géré par Vite) */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+body {
+  background-color: #f0f2f5; 
+  font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+}
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.preview, .droppable {
+  border: 2px dashed #e9ecef;
+  border-radius: 0.5rem;
+  padding: 10px;
+  background-color: #f8f9fa;
+  min-height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: flex-start;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.droppable:hover {
+  border-color: #0d6efd;
+  background-color: #e7f1ff;
+}
+.tag {
+  padding: 6px 12px;
+  border-radius: 0.35rem;
+  font-weight: 500;
+  cursor: grab;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.column-name-input {
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.8);
+    color: #333;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: 140px;
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+.tag-settings {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 1px solid #d1d3e2;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  z-index: 10;
+  box-shadow: 0 0.25rem 1.25rem rgba(58, 59, 69, .175);
+  width: 160px;
+  gap: 4px;
+}
+
+.tag-settings label {
+  font-size: 0.8rem;
+  color: #5a5c69;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.tag-settings input[type=number] {
+  width: 100%;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border-radius: 0.35rem;
+  border: 1px solid #d1d3e2;
+}
+
+.tag-settings .close-settings {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #858796;
+  cursor: pointer;
+  line-height: 1;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.tag-settings .close-settings:hover {
+  color: #e74c3c;
+}
+
+/* --- FIN DU FICHIER style.css. Total des lignes générées : 124 --- */

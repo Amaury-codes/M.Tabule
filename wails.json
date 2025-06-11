@@ -1,0 +1,16 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "Monsieur-Tabule",
+  "output": "build/bin/MonsieurTabule",
+  "outputfilename": "MonsieurTabule",
+  "productName": "Monsieur Tabule",
+  "description": "Un gentleman qui s'occupe de ranger et structurer vos données TXT en CSV.",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "Amaury Poussier",
+    "email": "amaury.poussier@gmail.com"
+  }
+}
