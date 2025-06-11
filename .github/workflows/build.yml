@@ -19,7 +19,7 @@ jobs:
 
       # 2. Utilise l'action officielle de Wails qui s'occupe de TOUT
       - name: Build Wails App
-        uses: wailsapp/wails-action@v2
+        uses: dAppServer/wails-action@v2
         with:
           # Spécifie la plateforme cible
           platform: windows/amd64
@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build Wails App
-        uses: wailsapp/wails-action@v2
+        uses: dAppServer/wails-action@v2
         with:
           platform: darwin/universal
       - name: Upload Artifact
