@@ -1,5 +1,5 @@
 {
-  "$schema": "https://wails.io/schemas/config.v2.json",
+  "$schema": "https://wails.io/schemas/v2.10.json",
   "name": "Monsieur-Tabule",
   "output": "build/bin/MonsieurTabule",
   "outputfilename": "MonsieurTabule",
